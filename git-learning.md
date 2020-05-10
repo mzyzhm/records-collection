@@ -184,6 +184,18 @@ $ git clean -fd
 
 
 
+8. 删除文件
 
+# 删除文件 git rm
+
+# 从历史提交中提取文件
+$ git cat-file -p HEAD~1:filename > filename
+
+# 移动文件 git mv
+
+# 打tag
+$ git tag -m "message..." tag_name 
+
+# .gitignore 只对未跟踪的文件起作用
 
 ```
