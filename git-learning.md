@@ -198,4 +198,52 @@ $ git tag -m "message..." tag_name
 
 # .gitignore 只对未跟踪的文件起作用
 
+
+# git rev-parse 底层命令
+
+
+# log 命令
+$ git log --graph
+$ git log -3
+
+# -p 在显示日志时同时显示改动
+$ git log -p -l
+
+# 不需要知道具体的改动，只想知道改动在哪些文件上用--stat
+$ git log --stat --oneline I..C
+
+
+$ git show
+$ git cat-file
+
+
+# git diff
+
+# git diff 提供逐行比较，显示改动前的行和改动后的行，
+# 另一种逐词比较的输出，使用--word-diff
+$ git diff --word-diff
+
+
+# 显示改行最早是在什么版本引入的
+$ git blame <filename>
+
+$ git blame -L 6,+5 <filename>
+
+# 比较正确版本和有问题版本之前的差异，以及问题可能引入的位置
+$ git bisect
+
+
+8. 改变历史
+# 修补提交命令
+git commit --amend 
+
+# 多步悔棋，把多提commit合并为一个完整的提交
+
+# 把最近三次提交压缩为一个
+$ git reset --soft HEAD^^
+$ git commit -m "merge 3 commit"
+
+9. 回到未来
+
+
 ```
